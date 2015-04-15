@@ -110,7 +110,9 @@ au BufNewFile,BufReadPost *.less setl shiftwidth=2 filetype=css expandtab
 " go syntax highlighting
 au BufRead,BufNewFile *.go set filetype=go
 
-" Clear the search buffer when hitting return
+" Highlight matched search teams
+:set hlsearch
+" Clear highlighted search terms by hitting return
 :nnoremap <CR> :nohlsearch<cr>
 
 colorscheme Tomorrow-Night
