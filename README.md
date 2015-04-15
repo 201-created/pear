@@ -11,3 +11,8 @@ echo -e "[include]\n  path = ~/.pear/gitconfig" >> ~/.gitconfig
 git clone git@github.com:gmarik/Vundle.vim.git ~/.pear/vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 ```
+
+### Notes
+
+You can create a `~/.gitconfig.local` for any local git config overrides. It
+is automatically included.
