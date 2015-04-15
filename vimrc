@@ -1,3 +1,48 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.pear/vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+call vundle#begin('~/.pear/vim/bundle')
+
+" Install vundle packages
+Plugin 'gmarik/Vundle.vim' " Required by Vundle, must be first
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'alunny/pegjs-vim'
+Plugin 'ervandew/supertab'
+Plugin 'bling/vim-airline'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'aniero/vim-copy-as-rtf'
+Plugin 'heartsentwined/vim-emblem'
+Plugin 'tpope/vim-haml'
+Plugin 'nono/vim-handlebars'
+Plugin 'digitaltoad/vim-jade'
+Plugin 'pangloss/vim-javascript'
+Plugin 'tpope/vim-liquid'
+Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-rails'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'slim-template/vim-slim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
 " center the cursor in the screen vertically
 set scrolloff=10000
 
