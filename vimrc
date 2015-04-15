@@ -27,6 +27,7 @@ Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'slim-template/vim-slim'
+Plugin 'file:///~/.pear/vim/pear-colors'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
