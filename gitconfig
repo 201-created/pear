@@ -1,0 +1,11 @@
+[color]
+  ui = auto
+[alias]
+  co = checkout
+  ci = commit
+  b = branch
+  st = status
+[push]
+  default = current
+[branch]
+  autosetuprebase = always
