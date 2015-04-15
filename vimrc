@@ -16,7 +16,7 @@ Plugin 'alunny/pegjs-vim'
 Plugin 'ervandew/supertab'
 Plugin 'bling/vim-airline'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'aniero/vim-copy-as-rtf'
+" Plugin 'aniero/vim-copy-as-rtf' " FIXME: is no longer available
 Plugin 'heartsentwined/vim-emblem'
 Plugin 'tpope/vim-haml'
 Plugin 'nono/vim-handlebars'
