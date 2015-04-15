@@ -34,6 +34,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'slim-template/vim-slim'
 Plugin 'flazz/vim-colorschemes'
+Plugin 'tpope/vim-fugitive'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -82,6 +83,15 @@ let g:ctrlp_custom_ignore= {
   \ }
 
 set wildignore+=*/tmp/*,node_modules/*
+
+" leader-f opens Ag searching
+noremap <leader>f :Ag 
+
+" leader-gs opens git status
+noremap <leader>gs :Gstatus<CR>
+
+" leader-gc opens git commit
+noremap <leader>gc :Gcommit<CR>
 
 " vertical bar
 set cc=80
