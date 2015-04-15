@@ -93,6 +93,9 @@ noremap <leader>gs :Gstatus<CR>
 " leader-gc opens git commit
 noremap <leader>gc :Gcommit<CR>
 
+" leader-d toggles NERDTree drawer
+noremap <leader>d :NERDTreeToggle<CR>
+
 " vertical bar
 set cc=80
 
