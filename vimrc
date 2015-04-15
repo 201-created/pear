@@ -72,10 +72,7 @@ noremap <C-l> <C-W>l
 " prev buffer
 noremap <leader>s :b#<CR>
 
-" close quickfix window
-noremap <leader>C :ccl<CR>
-
-" cntr-p
+" ctrl-p
 noremap <leader>t :CtrlP<CR>
 " ctrl-p ignore some files
 " Not sure if both of these are necessary
@@ -83,7 +80,8 @@ let g:ctrlp_custom_ignore= {
   \ 'dir': 'node_modules'
   \ }
 
-set wildignore+=*/tmp/*,node_modules/*
+" Open buffers
+noremap <leader>b :CtrlPBuffer<CR>
 
 " leader-f opens Ag searching
 noremap <leader>f :Ag 
