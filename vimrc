@@ -113,6 +113,12 @@ au BufRead,BufNewFile *.go set filetype=go
 " Clear highlighted search terms by hitting return
 :nnoremap <CR> :nohlsearch<cr>
 
+" Better case searching
+" http://linuxcommando.blogspot.com/2008/06/smart-case-insensitive-incremental.html
+set ignorecase
+set smartcase
+set incsearch
+
 colorscheme Tomorrow-Night
 highlight  CursorLine cterm=None ctermbg=236
 autocmd InsertEnter * highlight  CursorLine cterm=None ctermbg=234
