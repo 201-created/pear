@@ -87,11 +87,13 @@ noremap <leader>b :CtrlPBuffer<CR>
 " leader-f opens Ag searching
 noremap <leader>f :Ag --ignore bower_components --ignore node_modules --ignore tmp --ignore dist 
 
+" mappings for fugitive
 " leader-gs opens git status
 noremap <leader>gs :Gstatus<CR>
-
 " leader-gc opens git commit
 noremap <leader>gc :Gcommit<CR>
+" leader-gb opens git blame
+noremap <leader>gb :Gblame<CR>
 
 " leader-d toggles NERDTree drawer
 noremap <leader>d :NERDTreeToggle<CR>
