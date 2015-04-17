@@ -85,7 +85,7 @@ let g:ctrlp_custom_ignore= {
 noremap <leader>b :CtrlPBuffer<CR>
 
 " leader-f opens Ag searching
-noremap <leader>f :Ag 
+noremap <leader>f :Ag --ignore bower_components --ignore node_modules --ignore tmp --ignore dist 
 
 " leader-gs opens git status
 noremap <leader>gs :Gstatus<CR>
