@@ -3,6 +3,8 @@
 ```
 npm install -g jshint
 brew install the_silver_searcher
+brew install bash_completion # optional
+brew install git # suggested, required for bash completion
 git clone git@github.com:201-created/pear.git ~/.pear
 # if using bash:
 echo "source ~/.pear/bash.sh" >> ~/.bash_profile

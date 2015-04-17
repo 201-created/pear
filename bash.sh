@@ -7,3 +7,4 @@ ulimit -n 1024
 
 source ~/.pear/bash/aliases.sh
 source ~/.pear/bash/prompt.sh
+source ~/.pear/bash/completion.sh
