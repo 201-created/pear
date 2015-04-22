@@ -210,3 +210,5 @@ if exists("+undofile")
   set undodir+=~/.vim/undo//
   set undofile
 endif
+
+let g:airline#extensions#branch#enabled = 0
