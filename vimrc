@@ -38,6 +38,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
+" Completes blocks like `do ... end` in ruby
+Plugin 'tpope/vim-endwise'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
