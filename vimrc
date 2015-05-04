@@ -40,6 +40,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'mattn/emmet-vim'
 " Completes blocks like `do ... end` in ruby
 Plugin 'tpope/vim-endwise'
+" Use leader-cc to comment out visual selected blocks
+Plugin 'scrooloose/nerdcommenter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
