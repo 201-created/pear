@@ -103,6 +103,9 @@ noremap <leader>gb :Gblame<CR>
 " leader-d toggles NERDTree drawer
 noremap <leader>d :NERDTreeToggle<CR>
 
+" redraw the screen
+noremap <leader>r :redraw!<CR>
+
 " vertical bar
 set cc=80
 
