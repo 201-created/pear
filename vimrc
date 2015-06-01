@@ -11,6 +11,9 @@ filetype off                  " required
 set runtimepath+=~/.pear/vim/bundle/Vundle.vim
 call vundle#begin('~/.pear/vim/bundle')
 
+" add snippets to the runtimepath for UltiSnips (plugin added below)
+set runtimepath+=~/.pear/vim-snippets
+
 " Install vundle packages
 Plugin 'gmarik/Vundle.vim' " Required by Vundle, must be first
 Plugin 'rking/ag.vim'
@@ -40,6 +43,18 @@ Plugin 'mattn/emmet-vim'
 Plugin 'tpope/vim-endwise'
 " Use leader-cc to comment out visual selected blocks
 Plugin 'scrooloose/nerdcommenter'
+" Use Ctrl-n to select/edit the same word multiple times
+Plugin 'terryma/vim-multiple-cursors'
+" expand snippets, docs here: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+" Snippets are in .pear/vim-snippets/UltiSnips/:filetype/some-name.snippets
+" The only current snippets are ember-specific JavaScript snippets
+Plugin 'SirVer/ultisnips'
+
+" Hit <tab> to expand a snippet, and ctrl-j and -k to move forward and
+" backward between the tab stops in the snippet
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
