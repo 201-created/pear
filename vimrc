@@ -49,6 +49,8 @@ Plugin 'terryma/vim-multiple-cursors'
 " Snippets are in .pear/vim-snippets/UltiSnips/:filetype/some-name.snippets
 " The only current snippets are ember-specific JavaScript snippets
 Plugin 'SirVer/ultisnips'
+" see https://github.com/easymotion/vim-easymotion
+Plugin 'easymotion/vim-easymotion'
 
 " Hit <tab> to expand a snippet, and ctrl-j and -k to move forward and
 " backward between the tab stops in the snippet
