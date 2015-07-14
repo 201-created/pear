@@ -124,10 +124,6 @@ noremap <leader>r :redraw!<CR>
 " vertical bar
 set cc=80
 
-" 2-space indentation for coffeescript, taken from the coffeescript
-" syntax README file
-au BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
-
 " 2-space indentation and filetype for for less
 au BufNewFile,BufReadPost *.less setl shiftwidth=2 filetype=css expandtab
 
