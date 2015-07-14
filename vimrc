@@ -243,4 +243,10 @@ else
     \ }
 endif
 
+" Adds a dummy sign that ensures that the sign column is always shown and
+" won't flicker on/off when syntastic finds errors
+" see http://superuser.com/questions/558876/how-can-i-make-the-sign-column-show-up-all-the-time-even-if-no-signs-have-been-a
+autocmd BufEnter * sign define dummy
+autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+
 let g:airline#extensions#branch#enabled = 0
