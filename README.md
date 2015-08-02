@@ -2,6 +2,7 @@
 
 ```
 npm install -g jshint
+brew install vim
 brew install the_silver_searcher
 brew install bash-completion # optional
 brew install git # suggested, required for bash completion
