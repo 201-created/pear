@@ -52,6 +52,7 @@ Plugin 'SirVer/ultisnips'
 " see https://github.com/easymotion/vim-easymotion
 Plugin 'easymotion/vim-easymotion'
 
+
 " Hit <tab> to expand a snippet, and ctrl-j and -k to move forward and
 " backward between the tab stops in the snippet
 let g:UltiSnipsExpandTrigger="<tab>"
@@ -141,7 +142,6 @@ set ignorecase
 set smartcase
 set incsearch
 
-colorscheme Tomorrow-Night
 highlight  CursorLine cterm=None ctermbg=236
 autocmd InsertEnter * highlight  CursorLine cterm=None ctermbg=234
 autocmd InsertLeave * highlight  CursorLine cterm=None ctermbg=236
@@ -250,3 +250,12 @@ autocmd BufEnter * sign define dummy
 autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
 
 let g:airline#extensions#branch#enabled = 0
+
+
+"personal customizations not originally in https://github.com/201-created/pear
+"plugins
+Plugin 'airblade/vim-gitgutter'
+"settings
+colorscheme Monokai
+set listchars=space:·
+set list

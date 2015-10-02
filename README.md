@@ -1,3 +1,6 @@
+## Introduction
+This is my private fork of [Pear](https://github.com/201-created/pear) made by [201 Created](http://www.201-created.com/), which simply has my personal vim and bash preferences on top of theirs.
+
 ## Installation
 
 ```
