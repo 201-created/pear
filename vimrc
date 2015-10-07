@@ -75,7 +75,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " center the cursor in the screen vertically
-set scrolloff=10000
+" set scrolloff=10000
 
 let mapleader = ";"
 inoremap <leader>j <Esc>
