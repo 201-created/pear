@@ -51,6 +51,7 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'SirVer/ultisnips'
 " see https://github.com/easymotion/vim-easymotion
 Plugin 'easymotion/vim-easymotion'
+Plugin 'leafgarland/typescript-vim'
 
 " Hit <tab> to expand a snippet, and ctrl-j and -k to move forward and
 " backward between the tab stops in the snippet
