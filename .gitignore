@@ -1,4 +1,6 @@
 *.un~
 *.swp
+./vim/bundle/*
+./vim-snippets/*
 vim/bundle/*
 vim-snippets/*

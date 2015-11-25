@@ -8,11 +8,11 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set runtimepath+=~/.pear/vim/bundle/Vundle.vim
-call vundle#begin('~/.pear/vim/bundle')
+set runtimepath+=~/.tristan/vim/bundle/Vundle.vim
+call vundle#begin('~/.tristan/vim/bundle')
 
 " add snippets to the runtimepath for UltiSnips (plugin added below)
-set runtimepath+=~/.pear/vim-snippets
+set runtimepath+=~/.tristan/vim-snippets
 
 " Install vundle packages
 Plugin 'gmarik/Vundle.vim' " Required by Vundle, must be first
@@ -46,7 +46,7 @@ Plugin 'scrooloose/nerdcommenter'
 " Use Ctrl-n to select/edit the same word multiple times
 Plugin 'terryma/vim-multiple-cursors'
 " expand snippets, docs here: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
-" Snippets are in .pear/vim-snippets/UltiSnips/:filetype/some-name.snippets
+" Snippets are in .tristan/vim-snippets/UltiSnips/:filetype/some-name.snippets
 " The only current snippets are ember-specific JavaScript snippets
 Plugin 'SirVer/ultisnips'
 " see https://github.com/easymotion/vim-easymotion
