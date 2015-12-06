@@ -11,7 +11,7 @@ brew install bash-completion # optional
 brew install git # suggested, required for bash completion
 git clone git@github.com:TSiege/tristan.git ~/.tristan
 # if using bash:
-echo "source ~/.tristan/bash/profile.sh" >> ~/.bash_profile
+echo "source ~/.tristan/bash_profile" >> ~/.bash_profile
 # if using zsh:
 echo "source ~/.tristan/zsh.sh" >> ~/.zshrc
 echo "source-file ~/.tristan/tmux.conf" >> ~/.tmux.conf
