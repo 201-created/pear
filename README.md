@@ -14,8 +14,6 @@ git clone git@github.com:TSiege/tristan.git ~/.tristan
 # if using bash:
 [[ -f ~/.bash_profile ]] && mv ~/.bash_profile ~/.bash_profile.bak
 ln -s ~/.tristan/bash_profile ~/.bash_profile
-# if using zsh:
-echo "source ~/.tristan/zsh.sh" >> ~/.zshrc
 echo "source-file ~/.tristan/tmux.conf" >> ~/.tmux.conf
 echo "so ~/.tristan/vimrc" >> ~/.vimrc
 echo -e "[include]\n  path = ~/.tristan/gitconfig" >> ~/.gitconfig
