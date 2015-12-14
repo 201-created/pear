@@ -3,6 +3,10 @@ ulimit -n 1024
 
 # node path
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
+# node version manager path
+export NVM_DIR="$HOME/.nvm"
+# ruby version manager path
+export RVM_DIR="/Users/$USER/.rvm"
 # gitconfig stuff
 export GIT_MERGE_AUTOEDIT='no'
 # editor settings

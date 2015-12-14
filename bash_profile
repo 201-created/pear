@@ -4,5 +4,7 @@ source "/Users/$USER/.profile"
 
 prompt
 
+# Source nvm
+[[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
 # Sourcing RVM (MUST BE LAST IN PROFILE)
-[[ -s "/Users/$USER/.rvm/scripts/rvm" ]] && source "/Users/$USER/.rvm/scripts/rvm"
+[[ -s "$RVM_DIR/scripts/rvm" ]] && source "$RVM_DIR/scripts/rvm"

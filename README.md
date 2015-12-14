@@ -9,6 +9,7 @@ brew install vim
 brew install the_silver_searcher
 brew install bash-completion # optional
 brew install git # suggested, required for bash completion
+curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 git clone git@github.com:TSiege/tristan.git ~/.tristan
 # if using bash:
 echo "source ~/.tristan/bash_profile" >> ~/.bash_profile
