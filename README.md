@@ -12,7 +12,8 @@ brew install git # suggested, required for bash completion
 curl -o- https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 git clone git@github.com:TSiege/tristan.git ~/.tristan
 # if using bash:
-echo "source ~/.tristan/bash_profile" >> ~/.bash_profile
+[[ -f ~/.bash_profile ]] && mv ~/.bash_profile ~/.bash_profile.bak
+ln -s ~/.tristan/bash_profile ~/.bash_profile
 # if using zsh:
 echo "source ~/.tristan/zsh.sh" >> ~/.zshrc
 echo "source-file ~/.tristan/tmux.conf" >> ~/.tmux.conf
