@@ -41,7 +41,7 @@ Plugin 'SirVer/ultisnips'
 " see https://github.com/easymotion/vim-easymotion
 Plugin 'easymotion/vim-easymotion'
 
-"SYNTAX HIGHLIGHTING PLUGINS 
+"SYNTAX HIGHLIGHTING PLUGINS
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'leafgarland/typescript-vim'
 Plugin 'heartsentwined/vim-emblem'
@@ -122,6 +122,8 @@ noremap <leader>gb :Gblame<CR>
 
 " leader-d toggles NERDTree drawer
 noremap <leader>d :NERDTreeToggle<CR>
+" shows dotfiles in nerdtree
+let NERDTreeShowHidden=1
 
 " redraw the screen
 noremap <leader>r :redraw!<CR>
@@ -254,7 +256,6 @@ autocmd BufEnter * sign define dummy
 autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
 
 let g:airline#extensions#branch#enabled = 0
-
 
 "personal customizations not originally in https://github.com/201-created/pear
 "plugins
