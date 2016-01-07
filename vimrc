@@ -263,3 +263,15 @@ Plugin 'airblade/vim-gitgutter'
 colorscheme Monokai
 set listchars=space:·
 set list
+
+" Removes trailing spaces
+function! TrimWhiteSpace()
+  let l:save_cursor = getpos('.')
+  %s/\s\+$//e
+  call setpos('.', l:save_cursor)
+endfunction
+
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()
