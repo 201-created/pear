@@ -96,17 +96,13 @@ noremap <leader>s :b#<CR>
 
 " ctrl-p
 noremap <leader>t :CtrlP<CR>
-" ctrl-p ignore some files
-" Not sure if both of these are necessary
-let g:ctrlp_custom_ignore= {
-  \ 'dir': 'node_modules'
-  \ }
 
 " Open buffers
 noremap <leader>b :CtrlPBuffer<CR>
 
 " leader-f opens Ag searching
-noremap <leader>f :Ag --ignore bower_components --ignore node_modules --ignore tmp --ignore dist 
+let g:ag_prg="ag --vimgrep --ignore ^bower_components --ignore ^node_modules --ignore ^tmp --ignore ^dist"
+noremap <leader>f :Ag 
 
 " mappings for fugitive
 " leader-gs opens git status
