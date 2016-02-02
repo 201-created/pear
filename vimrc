@@ -54,6 +54,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'slim-template/vim-slim'
 Plugin 'kchmck/vim-coffee-script'
+Plugin 'hail2u/vim-css3-syntax'
 
 
 " Hit <tab> to expand a snippet, and ctrl-j and -k to move forward and
