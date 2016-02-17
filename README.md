@@ -14,7 +14,7 @@ echo "source ~/.pear/zsh.sh" >> ~/.zshrc
 echo "source-file ~/.pear/tmux.conf" >> ~/.tmux.conf
 echo "so ~/.pear/vimrc" >> ~/.vimrc
 echo -e "[include]\n  path = ~/.pear/gitconfig" >> ~/.gitconfig
-git clone git@github.com:gmarik/Vundle.vim.git ~/.pear/vim/bundle/Vundle.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.pear/vim/bundle/Vundle.vim
 vim +PluginInstall +qall
 ```
 
