@@ -247,3 +247,6 @@ autocmd BufEnter * sign define dummy
 autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
 
 let g:airline#extensions#branch#enabled = 0
+
+" Enable mouse, option-click for normal clicks
+set mouse=a
