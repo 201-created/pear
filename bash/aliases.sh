@@ -1,7 +1,7 @@
 # Package Managers
 alias br="bundle exec rake"
 alias be="bundle exec"
-alias nombom="rm -rf tmp/ dist/ node_modules/ bower_components && npm i && bower i"
+alias nombom="nom && bom"
 
 # LS
 alias l="ls -lah"

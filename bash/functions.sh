@@ -67,3 +67,23 @@ function extract () {
       echo "'$1' is not a valid file"
   fi
 }
+
+function nom (){
+  if [[ -f ./package.json ]]; then
+    rm -rf ./node_modules/
+    npm cache clean
+    npm install
+  else
+    echo "no package.json present"
+  fi
+}
+
+function bom (){
+  if [[ -f ./bower.json ]]; then
+    rm -rf ./bower_components/
+    bower cache clean
+    bower install
+  else
+    echo "no bower.json present"
+  fi
+}
