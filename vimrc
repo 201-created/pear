@@ -52,6 +52,7 @@ Plugin 'SirVer/ultisnips'
 " see https://github.com/easymotion/vim-easymotion
 Plugin 'easymotion/vim-easymotion'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'maxbrunsfeld/vim-yankstack'
 
 " Hit <tab> to expand a snippet, and ctrl-j and -k to move forward and
 " backward between the tab stops in the snippet
@@ -91,6 +92,10 @@ noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k
 noremap <C-l> <C-W>l
 
+" Open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 " prev buffer
 noremap <leader>s :b#<CR>
 
@@ -102,7 +107,7 @@ noremap <leader>b :CtrlPBuffer<CR>
 
 " leader-f opens Ag searching
 let g:ag_prg="ag --vimgrep --ignore ^bower_components --ignore ^node_modules --ignore ^tmp --ignore ^dist"
-noremap <leader>f :Ag 
+noremap <leader>f :Ag
 
 " mappings for fugitive
 " leader-gs opens git status
@@ -213,6 +218,12 @@ set directory+=.
 " viminfo stores the the state of your previous editing session
 set viminfo+=n~/.vim/viminfo
 
+" Return to last edit position when opening files
+autocmd BufReadPost *
+     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+     \   exe "normal! g`\"" |
+     \ endif
+
 if exists("+undofile")
   " undofile - This allows you to use undos after exiting and restarting
   " This, like swap and backups, uses .vim-undo first, then ~/.vim/undo
@@ -250,3 +261,27 @@ let g:airline#extensions#branch#enabled = 0
 
 " Enable mouse, option-click for normal clicks
 set mouse=a
+
+" Set spell checking for markdown
+autocmd BufRead,BufNewFile *.md setlocal spell
+
+" Don't break word boundaries by hyphen
+set isk+=-
+
+" Disable Ex mode
+map Q <Nop>
+
+" Update bufferes when a file is changed from the outside
+set autoread
+
+" Set windows to a minimum width when moving into them
+set winwidth=79
+
+" Configure backspace so that it keeps deleting
+set backspace=eol,start,indent
+
+" Show matching brackets when text indicator is over them
+set showmatch
+
+" Enable settings for special snowflake users
+"source ~/.pear/users/mitchlloyd/vimrc

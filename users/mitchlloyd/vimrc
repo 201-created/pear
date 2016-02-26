@@ -1,0 +1,46 @@
+" Let comma work as the leader key
+:nmap , ;
+
+" Another way to get to the previous buffer. <leader><leader> won't work here
+" because after leader is pressed the first time, the second key press
+" registers as a ';' due to the mapping above.
+noremap ,, :b#<CR>
+
+" Move a line of text using ALT+[jk] or Comamnd+[jk] on mac
+nmap <M-j> mz:m+<cr>`z
+nmap <M-k> mz:m-2<cr>`z
+vmap <M-j> :m'>+<cr>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<cr>`>my`<mzgv`yo`z
+
+if has("mac") || has("macunix")
+  nmap <D-j> <M-j>
+  nmap <D-k> <M-k>
+  vmap <D-j> <M-j>
+  vmap <D-k> <M-k>
+endif
+
+" These settings currently conflict with other Pear settings. Uncomment in
+" case of emergency.
+
+" Map Nerd Tree to ctrl-n
+"map <C-n> :NERDTreeToggle<CR>
+
+" Quickly rename and reload a file
+"function! RenameFile()
+"    let old_name = expand('%')
+"    let new_name = input('New file name: ', expand('%'), 'file')
+"    if new_name != '' && new_name != old_name
+"       exec ':saveas ' . new_name
+"        exec ':silent !rm ' . old_name
+"        redraw!
+"    endif
+"endfunction
+"map <Leader>r :call RenameFile()<cr>
+
+" Set cursor context to something smaller
+"set scrolloff=7
+
+" Turn backups off
+"set nobackup
+"set nowb
+"set noswapfile
