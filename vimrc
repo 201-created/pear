@@ -121,6 +121,32 @@ noremap <leader>r :redraw!<CR>
 " vertical bar
 set cc=80
 
+" Taken from unimpaired paste plugin
+" Type "yo" or "yO" to switch to insert mode with "paste" set on the line below/above
+" Exiting insert mode exits paste mode
+" See https://github.com/tpope/vim-unimpaired/blob/master/plugin/unimpaired.vim#L239-L260
+function! s:setup_paste() abort
+  let s:paste = &paste
+  let s:mouse = &mouse
+  set paste
+  set mouse=
+  augroup unimpaired_paste
+    autocmd!
+    autocmd InsertLeave *
+          \ if exists('s:paste') |
+          \   let &paste = s:paste |
+          \   let &mouse = s:mouse |
+          \   unlet s:paste |
+          \   unlet s:mouse |
+          \ endif |
+          \ autocmd! unimpaired_paste
+  augroup END
+endfunction
+
+nnoremap <silent> <Plug>unimpairedPaste :call <SID>setup_paste()<CR>
+nnoremap <silent> yo  :call <SID>setup_paste()<CR>o
+nnoremap <silent> yO  :call <SID>setup_paste()<CR>O
+
 " 2-space indentation and filetype for for less
 au BufNewFile,BufReadPost *.less setl shiftwidth=2 filetype=css expandtab
 
