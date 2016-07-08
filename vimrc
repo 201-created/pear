@@ -52,6 +52,8 @@ Plugin 'SirVer/ultisnips'
 " see https://github.com/easymotion/vim-easymotion
 Plugin 'easymotion/vim-easymotion'
 Plugin 'leafgarland/typescript-vim'
+" see https://github.com/christoomey/vim-tmux-navigator
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Hit <tab> to expand a snippet, and ctrl-j and -k to move forward and
 " backward between the tab stops in the snippet
