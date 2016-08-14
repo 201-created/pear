@@ -18,11 +18,10 @@ function print_branch_name_and_status {
 }
 
 function prompt {
-  local       RED="\[\033[0;31m\]"
-  local LIGHT_RED="\[\033[1;31m\]"
-  local      CHAR="⏣ ⌬ "
+  local RED="\[\033[0;31m\]"
+  local CHAR="⏣ ⌬ "
 
-  export PS1="\[\e]2;\u@\h\a[\[\e[37;44;1m\]\t\[\e[0m\]] \[\e[32m\]\W\[\e[0m\]$RED \$(print_branch_name_and_status)\n\[\e[0;31m\]$CHAR \[\e[0m\]"
+  export PS1="\[\e]2;\u@\h\a[\t\[\e[0m\]] \[\e[32m\]\W\[\e[0m\]$RED \$(print_branch_name_and_status)\n\[\e[0;31m\]$CHAR \[\e[0m\]"
          PS2='> '
          PS4='+ '
 }
