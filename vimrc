@@ -262,7 +262,7 @@ let g:airline#extensions#branch#enabled = 0
 Plugin 'airblade/vim-gitgutter'
 "settings
 colorscheme Monokai
-set listchars=space:·
+set listchars=space:·,tab:₋₋,eol:¬,nbsp:_
 set list
 
 " Removes trailing spaces
