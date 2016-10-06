@@ -159,6 +159,9 @@ au BufNewFile,BufReadPost *.less setl shiftwidth=2 filetype=css expandtab
 " go syntax highlighting
 au BufRead,BufNewFile *.go set filetype=go
 
+" md wrap at 80 chars
+au BufRead,BufNewFile *.md setlocal textwidth=80
+
 " Highlight matched search teams
 :set hlsearch
 " Clear highlighted search terms by hitting return
