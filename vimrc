@@ -80,6 +80,10 @@ filetype plugin indent on    " required
 set scrolloff=10000
 
 let mapleader = ";"
+
+" Mitch setting
+nmap , ;
+
 inoremap <leader>j <Esc>
 vnoremap <leader>j <Esc>
 inoremap <leader>w <Esc>:w<CR>
