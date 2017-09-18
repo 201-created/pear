@@ -15,29 +15,23 @@ call vundle#begin('~/.pear/vim/bundle')
 set runtimepath+=~/.pear/vim-snippets
 
 " Install vundle packages
-Plugin 'gmarik/Vundle.vim' " Required by Vundle, must be first
-Plugin 'rking/ag.vim'
-Plugin 'kien/ctrlp.vim'
+Plugin 'VundleVim/Vundle.vim' " Required by Vundle, must be first
+Plugin 'mileszs/ack.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'alunny/pegjs-vim'
 Plugin 'ervandew/supertab'
-Plugin 'bling/vim-airline'
-Plugin 'kchmck/vim-coffee-script'
+Plugin 'vim-airline/vim-airline'
 Plugin 'zerowidth/vim-copy-as-rtf'
-Plugin 'heartsentwined/vim-emblem'
-Plugin 'tpope/vim-haml'
-Plugin 'nono/vim-handlebars'
-Plugin 'digitaltoad/vim-jade'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-liquid'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'slim-template/vim-slim'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'scrooloose/syntastic'
+Plugin 'vim-syntastic/syntastic'
 Plugin 'mattn/emmet-vim'
 " Completes blocks like `do ... end` in ruby
 Plugin 'tpope/vim-endwise'
@@ -52,6 +46,7 @@ Plugin 'SirVer/ultisnips'
 " see https://github.com/easymotion/vim-easymotion
 Plugin 'easymotion/vim-easymotion'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
 " see https://github.com/christoomey/vim-tmux-navigator
 Plugin 'christoomey/vim-tmux-navigator'
 
@@ -107,8 +102,8 @@ noremap <leader>t :CtrlP<CR>
 noremap <leader>b :CtrlPBuffer<CR>
 
 " leader-f opens Ag searching
-let g:ag_prg="ag --vimgrep --ignore ^bower_components --ignore ^node_modules --ignore ^tmp --ignore ^dist"
-noremap <leader>f :Ag 
+let g:ackprg = 'ag --vimgrep --ignore ^bower_components --ignore ^node_modules --ignore ^tmp --ignore ^dist'
+noremap <leader>f :Ack! 
 
 " mappings for fugitive
 " leader-gs opens git status
@@ -285,3 +280,25 @@ let g:airline#extensions#branch#enabled = 0
 
 " Enable mouse, option-click for normal clicks
 set mouse=a
+
+" Use syntastic for tsuquyomi errors
+let g:tsuquyomi_disable_quickfix = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint'] " You shouldn't use 'tsc' checker.
+
+autocmd FileType typescript call NodeSyntasticChecker('tslint')
+
+function NodeSyntasticChecker(checker_command)
+  let npm_bin_path = substitute(system('npm bin'), '\n\+$', '', '')
+  let local_checker_command = npm_bin_path . '/' . a:checker_command
+  if filereadable(local_checker_command)
+    let g:syntastic_typescript_tslint_exec = local_checker_command
+    let g:syntastic_typescript_tslint_exe = local_checker_command
+  elseif
+    unlet g:syntastic_typescript_tslint_exec
+    unlet g:syntastic_typescript_tslint_exe
+  endif
+endfunction
+
+autocmd FileType typescript nmap <buffer> t : <C-u>echo tsuquyomi#hint()<CR>
+autocmd FileType typescript noremap <buffer> <C-]>d :TsuDefinition<CR>
+autocmd FileType typescript noremap <buffer> <C-]>t :TsuTypeDefinition<CR>
