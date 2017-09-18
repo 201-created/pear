@@ -31,7 +31,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
-Plugin 'vim-syntastic/syntastic'
+Plugin 'w0rp/ale'
 Plugin 'mattn/emmet-vim'
 " Completes blocks like `do ... end` in ruby
 Plugin 'tpope/vim-endwise'
@@ -169,7 +169,7 @@ set smartcase
 set incsearch
 
 colorscheme Tomorrow-Night
-highlight  CursorLine cterm=None ctermbg=236
+highlight CursorLine cterm=None ctermbg=236
 autocmd InsertEnter * highlight  CursorLine cterm=None ctermbg=234
 autocmd InsertLeave * highlight  CursorLine cterm=None ctermbg=236
 
@@ -202,9 +202,6 @@ syntax enable
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 
 au BufNewFile,BufRead *.es6 set filetype=javascript
-
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
 
 set wildmode=longest,list,full
 set wildmenu
@@ -270,34 +267,30 @@ else
     \ }
 endif
 
-" Adds a dummy sign that ensures that the sign column is always shown and
-" won't flicker on/off when syntastic finds errors
-" see http://superuser.com/questions/558876/how-can-i-make-the-sign-column-show-up-all-the-time-even-if-no-signs-have-been-a
-autocmd BufEnter * sign define dummy
-autocmd BufEnter * execute 'sign place 9999 line=1 name=dummy buffer=' . bufnr('')
+let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_save = 0
+let g:ale_lint_on_filetype_changed = 0
+let g:ale_lint_on_insert_leave = 1
+
+let g:ale_open_list = 0
+let g:ale_set_quickfix = 0
+let g:ale_set_loclist = 0
+
+let g:ale_sign_column_always = 1
+
+let g:airline#extensions#ale#enabled = 1
+highlight ALEError cterm=bold ctermfg=1
+highlight ALEWarning cterm=bold ctermfg=3
+highlight ALEErrorSign ctermfg=1
+highlight ALEWarningSign ctermfg=3
+let g:ale_sign_error = '•'
+let g:ale_sign_warning = '•'
 
 let g:airline#extensions#branch#enabled = 0
 
 " Enable mouse, option-click for normal clicks
 set mouse=a
-
-" Use syntastic for tsuquyomi errors
-let g:tsuquyomi_disable_quickfix = 1
-let g:syntastic_typescript_checkers = ['tsuquyomi', 'tslint'] " You shouldn't use 'tsc' checker.
-
-autocmd FileType typescript call NodeSyntasticChecker('tslint')
-
-function NodeSyntasticChecker(checker_command)
-  let npm_bin_path = substitute(system('npm bin'), '\n\+$', '', '')
-  let local_checker_command = npm_bin_path . '/' . a:checker_command
-  if filereadable(local_checker_command)
-    let g:syntastic_typescript_tslint_exec = local_checker_command
-    let g:syntastic_typescript_tslint_exe = local_checker_command
-  elseif
-    unlet g:syntastic_typescript_tslint_exec
-    unlet g:syntastic_typescript_tslint_exe
-  endif
-endfunction
 
 autocmd FileType typescript nmap <buffer> t : <C-u>echo tsuquyomi#hint()<CR>
 autocmd FileType typescript noremap <buffer> <C-]>d :TsuDefinition<CR>
