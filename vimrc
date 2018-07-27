@@ -28,7 +28,8 @@ Plugin 'tpope/vim-liquid'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
-Plugin 'flazz/vim-colorschemes'
+Plugin 'slim-template/vim-slim.git'
+Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'vim-syntastic/syntastic'
@@ -168,7 +169,6 @@ set ignorecase
 set smartcase
 set incsearch
 
-colorscheme Tomorrow-Night
 highlight  CursorLine cterm=None ctermbg=236
 autocmd InsertEnter * highlight  CursorLine cterm=None ctermbg=234
 autocmd InsertLeave * highlight  CursorLine cterm=None ctermbg=236
