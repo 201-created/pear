@@ -15,10 +15,12 @@ export GIT_EDITOR=vim
 export SVN_EDITOR=vim
 export CLICOLOR=1
 export VISUAL=vim
+# vscode path
+export VSCODE_PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
 # homebrew path
 export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin"
 #final path
-export PATH="$USR_PATHS:$PATH"
+export PATH="$USR_PATHS:$PATH:$VSCODE_PATH"
 
 #supporting files
 source ~/.tristan/bash/functions.sh

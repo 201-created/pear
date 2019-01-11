@@ -1,6 +1,7 @@
+# Source all desired files from tristan repo
 source "/Users/$USER/.tristan/bash/profile.sh"
 # Source ~/.profile for secret env variables
-source "/Users/$USER/.profile"
+[[ -s "/Users/$USER/.profile" ]] && source "/Users/$USER/.profile"
 
 prompt
 
