@@ -10,7 +10,7 @@
   co = checkout
   cm = commit -m
   d = diff
-  l = log
+  l = log --oneline
   rc = rebase --continue
   # remove merged local branches
   rml = "!git branch --merged master | grep -v master | xargs -n 1 git branch -d"
