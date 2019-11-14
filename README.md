@@ -3,7 +3,7 @@ This is my personal fork of [Pear](https://github.com/201-created/pear) made by 
 
 ## Installation
 
-```
+```bash
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 brew install vim
 brew install the_silver_searcher

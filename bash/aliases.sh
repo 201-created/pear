@@ -7,7 +7,5 @@ alias nombom="nom && bom"
 alias l="ls -lah"
 
 # Git
-alias gaa="git add -A"
 alias gst="git status"
-alias gcm="git commit -m"
 alias gcom="git checkout master"

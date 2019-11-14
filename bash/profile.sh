@@ -1,6 +1,3 @@
-# default open files in OSX is very low
-ulimit -n 1024
-
 # node path
 export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
 # node version manager path
