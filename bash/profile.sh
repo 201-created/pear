@@ -1,5 +1,7 @@
 # node path
-export NODE_PATH="/usr/local/lib/node_modules:$NODE_PATH"
+export NODE_PATH="/usr/local/lib/node_modules"
+# ruby path
+export RUBY_PATH="/usr/local/opt/ruby/bin"
 # node version manager path
 export NVM_DIR="$HOME/.nvm"
 # ruby version manager path
@@ -17,7 +19,7 @@ export VSCODE_PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resourc
 # homebrew path
 export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin"
 #final path
-export PATH="$USR_PATHS:$PATH:$VSCODE_PATH"
+export PATH="$RUBY_PATH:$NODE_PATH:$USR_PATHS:$PATH:$VSCODE_PATH"
 
 #supporting files
 source ~/.tristan/bash/functions.sh
