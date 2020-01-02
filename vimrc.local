@@ -1,0 +1,53 @@
+""""""""""""""""""""""""""""""""
+" SETTINGS
+""""""""""""""""""""""""""""""""
+colorscheme Monokai
+set listchars=tab:₋₋,nbsp:_
+set list
+set nospell
+" tabstop:          Width of tab character
+" softtabstop:      Fine tunes the amount of white space to be added
+" shiftwidth        Determines the amount of whitespace to add in normal mode
+" expandtab:        When on uses space instead of tabs
+set tabstop     =2
+set softtabstop =2
+set shiftwidth  =2
+set expandtab
+
+""""""""""""""""""""""""""""""""
+" LEADER REMAPPINGS
+""""""""""""""""""""""""""""""""
+let mapleader = ";"
+" ctrl-p
+noremap <leader>t :CtrlP<CR>
+" ctrl-p ignore some files
+" Not sure if both of these are necessary
+let g:ctrlp_custom_ignore= {
+  \ 'dir': 'node_modules'
+  \ }
+" leader-e toggles NERDTree drawer
+noremap <leader>e :NERDTreeToggle<CR>
+" shows dotfiles in nerdtree
+let NERDTreeShowHidden=1
+
+
+" leader-f opens Ag searching
+noremap <leader>f :Ag --ignore bower_components --ignore node_modules --ignore tmp --ignore dist
+
+" use ag instead of ack https://github.com/ggreer/the_silver_searcher
+" let g:ackprg = 'ag --nogroup --nocolor --column'
+
+""""""""""""""""""""""""""""""""
+" MISC
+""""""""""""""""""""""""""""""""
+" Removes trailing spaces
+function! TrimWhiteSpace()
+  let l:save_cursor = getpos('.')
+  %s/\s\+$//e
+  call setpos('.', l:save_cursor)
+endfunction
+
+autocmd FileWritePre    * :call TrimWhiteSpace()
+autocmd FileAppendPre   * :call TrimWhiteSpace()
+autocmd FilterWritePre  * :call TrimWhiteSpace()
+autocmd BufWritePre     * :call TrimWhiteSpace()

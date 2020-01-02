@@ -110,7 +110,7 @@ let g:ctrlp_custom_ignore= {
 noremap <leader>b :CtrlPBuffer<CR>
 
 " leader-f opens Ag searching
-noremap <leader>f :Ag --ignore bower_components --ignore node_modules --ignore tmp --ignore dist 
+noremap <leader>f :Ag --ignore bower_components --ignore node_modules --ignore tmp --ignore dist
 
 " mappings for fugitive
 " leader-gs opens git status
@@ -262,7 +262,7 @@ let g:airline#extensions#branch#enabled = 0
 Plugin 'airblade/vim-gitgutter'
 "settings
 colorscheme Monokai
-set listchars=space:·,tab:₋₋,nbsp:_
+set listchars=space:·,eol:¬,tab:₋₋,nbsp:_
 set list
 
 " Removes trailing spaces
