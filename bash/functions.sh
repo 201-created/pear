@@ -1,8 +1,8 @@
 # Prompt Functions
 #============================
 function git_dirty_status {
-  [[ $(git status 2> /dev/null | tail -n1) == "nothing to commit, working directory clean" ]] && echo "✓"
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working directory clean" ]] && echo "✗"
+  [[ $(git status 2> /dev/null | tail -n1) == "nothing to commit, working tree clean" ]] && echo "✓"
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit, working tree clean" ]] && echo "✗"
 }
 
 function git_branch_name {
@@ -30,10 +30,6 @@ function prompt {
 # =====================
 function desktop {
   cd /Users/$USER/Desktop/$@
-}
-
-function code {
-  cd /Users/$USER/code/$@
 }
 
 # A function to easily grep for a matching process
