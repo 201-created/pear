@@ -2,7 +2,7 @@
 " SETTINGS
 """"""""""""""""""""""""""""""""
 colorscheme Monokai
-set listchars=tab:₋₋,nbsp:_
+set listchars=space:·,eol:¬,tab:₋₋,nbsp:_
 set list
 set nospell
 " tabstop:          Width of tab character
