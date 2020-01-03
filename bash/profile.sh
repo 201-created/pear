@@ -20,8 +20,3 @@ export VSCODE_PATH="\$PATH:/Applications/Visual Studio Code.app/Contents/Resourc
 export USR_PATHS="/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin"
 #final path
 export PATH="$RUBY_PATH:$NODE_PATH:$USR_PATHS:$PATH:$VSCODE_PATH"
-
-#supporting files
-source ~/.tristan/bash/functions.sh
-source ~/.tristan/bash/aliases.sh
-source ~/.tristan/bash/completion.sh
