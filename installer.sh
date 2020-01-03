@@ -22,6 +22,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 echo "Installations complete!"
 echo "Setting up local environment..."
 git clone git@github.com:TSiege/tristan.git ~/.tristan
+echo "Setting up .bash_profile"
+[[ -f ~/.bash_profile ]] && mv ~/.bash_profile ~/.bash_profile.bak
+ln -s ~/.tristan/bash_profile.sh ~/.bash_profile
 echo "Setting up .zprofile"
 [[ -f ~/.zprofile ]] && mv ~/.zprofile ~/.zprofile.bak
 ln -s ~/.tristan/zprofile.sh ~/.zprofile
