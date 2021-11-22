@@ -124,3 +124,8 @@ export AWS_SESSION_TOKEN=\"${AWS_SESSION_TOKEN}\"
 
   return 0
 }
+
+#Git functions
+function gcom () {
+  git show-ref --verify --quiet refs/heads/main && git co main || git co master
+}
