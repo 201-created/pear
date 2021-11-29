@@ -8,4 +8,3 @@ alias l="ls -lah"
 
 # Git
 alias gst="git status"
-alias gcom="git checkout master"
