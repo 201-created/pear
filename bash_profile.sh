@@ -1,8 +1,8 @@
 # Source all desired files from tristan repo
-source ~/.tristan/bash/functions.sh
-source ~/.tristan/bash/aliases.sh
-source ~/.tristan/bash/completion.sh
-source ~/.tristan/bash/profile.sh
+source ~/.tristan/shell_scripts/functions.sh
+source ~/.tristan/shell_scripts/aliases.sh
+source ~/.tristan/shell_scripts/completion.sh
+source ~/.tristan/shell_scripts/profile.sh
 # Source ~/.profile for secret env variables
 [[ -s "/Users/$USER/.profile" ]] && source "/Users/$USER/.profile"
 

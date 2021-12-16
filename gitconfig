@@ -37,3 +37,9 @@
   cmd = code --wait $MERGED
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
+[pager]
+	branch = false
+	log = false
+[user]
+	name = tristan
+	email = tristan.t.siegel@gmail.com
