@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="/opt/homebrew/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/tristan/.oh-my-zsh"
@@ -61,6 +62,8 @@ ZSH_THEME="tristan"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
+unsetopt share_history
+setopt    incappendhistory
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder

@@ -210,8 +210,8 @@ TRAPALRM() {
 
 # prompt
 headline_output() {
-  print -rP '$(real_time) $(directory) $(git_status)'
-  print -rP '⏣ ⌬ $(command_status) '
+  echo "$(real_time) $(directory) $(git_status)"
+  echo "⏣ ⌬ $(command_status) "
 }
 # PROMPT='$(real_time) $(login_info) $(directory) $(git_status)$(command_status) ';
 PROMPT='$(headline_output)';
