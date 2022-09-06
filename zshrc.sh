@@ -62,8 +62,7 @@ ZSH_THEME="tristan"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
-unsetopt share_history
-setopt    incappendhistory
+unsetopt share_history # don't share history betwen buffers
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
