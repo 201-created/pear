@@ -19,6 +19,8 @@
 [push]
   default = current
   followTags = true
+[pull]
+  rebase = false
 [branch]
   autosetuprebase = always
 [fetch]
@@ -37,3 +39,9 @@
   cmd = code --wait $MERGED
 [difftool "vscode"]
   cmd = code --wait --diff $LOCAL $REMOTE
+[pager]
+	branch = false
+	log = false
+[user]
+	name = tristan
+	email = tristan.t.siegel@gmail.com
