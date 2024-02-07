@@ -14,7 +14,7 @@
   l = log --oneline
   rc = rebase --continue
   # remove merged local branches
-  rml = "!git branch --merged master | grep -v master | xargs -n 1 git branch -d"
+  rml = "!git branch --merged main | grep -v main | xargs -n 1 git branch -d"
   st = status
 [push]
   default = current
@@ -43,5 +43,10 @@
 	branch = false
 	log = false
 [user]
-	name = tristan
-	email = tristan.t.siegel@gmail.com
+	name = Tristan Siegel
+	email = Tristan.t.Siegel@gmail.com
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
